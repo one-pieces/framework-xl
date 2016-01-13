@@ -1,0 +1,61 @@
+*, ol, ul, h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+}
+
+body {
+    background: #fff;
+    // font-family: 'latoregular';
+    font-family: 'Microsoft YaHei,微软雅黑,STXihei,华文细黑,serif';
+    font-size: 14px;
+    color: #989898;
+}
+
+a {
+    color: #123;
+    img {
+        border: none;
+    }
+    &:hover {
+        color: #2EA9DF;
+        text-decoration: none;
+    }
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.inb {
+    display: inline-block;
+}
+
+.overdot {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ref {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    height: 25%;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.icon-vip {
+    width: 20px;
+    height: 20px;
+    background: url('/static/images/v-role.png') no-repeat;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<base href="/"><!-- for enable $locationProvider.html5Mode with deeplinking -->
+		<title>cftvc</title>
+		<meta name="description" content="Copyright xiaolonglin">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div ui-view></div>
+		<script src="./vendor/requirejs/require.js"></script>
+		<script src="./config/require_config.js"></script>
+		<script>
+			// Need to ensure that the shared_require_config is loaded before any of app's dependencies load.
+			requirejs(['shared_require_config'], function() {
+				requirejs(['app'], function(app) {
+					app.init();
+				});
+			});
+		</script>
+	</body>
+</html>

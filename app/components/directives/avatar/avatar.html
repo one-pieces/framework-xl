@@ -1,0 +1,8 @@
+<div class="avatar" op-popover="{{isProfile}}" popover-container=".popover-container" popover-placement="bottom">
+    <a href="#" ui-sref="base.profile({id: data._id})">
+        <img src="/static/images/user/avatars/{{data.avatarUrl}}" title="{{data.nickname}}" alt="{{data.nickname}}" width="{{avatar.radius}}" height="{{avatar.radius}}">
+    </a>
+    <div class="popover-container hide">
+        <div><a ui-sref="base.profile({id: data._id})">个人设置</a></div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a ng-show="isBrandShown" class="navbar-brand" href="/" ui-sref="base.index">
+                <img src="static/images/cftvclogo.png" alt width="180" height="32">
+            </a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ng-repeat="item in navItems">
+                    <a href="#" ui-sref="{{item.link}}">{{item.label}}</a>
+                </li>
+            </ul>
+            <ul ng-show="isLoginShown" class="nav navbar-nav navbar-right">
+                <li ng-show="!navbar.user">
+                    <a href="#" ui-sref="base.login">登录</a>
+                </li>
+                <li class="signup-btn" ng-show="!navbar.user">
+                    <a href="#" ui-sref="base.signup.userInfo">注册</a>
+                </li>
+                <li ng-show="navbar.user">
+                    <op-avatar data="navbar.user" radius="small" is-profile="true"></op-avatar>
+                </li>
+                <li ng-show="navbar.user">
+                    <a href="#" ng-click="navbar.logout()">退出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
